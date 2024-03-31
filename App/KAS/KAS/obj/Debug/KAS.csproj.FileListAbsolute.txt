@@ -1,0 +1,10 @@
+D:\KAS\App\KAS\KAS\bin\Debug\KAS.exe.config
+D:\KAS\App\KAS\KAS\bin\Debug\KAS.exe
+D:\KAS\App\KAS\KAS\bin\Debug\KAS.pdb
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.csproj.AssemblyReference.cache
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.Sign_in.resources
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.Properties.Resources.resources
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.csproj.GenerateResource.cache
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.csproj.CoreCompileInputs.cache
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.exe
+D:\KAS\App\KAS\KAS\obj\Debug\KAS.pdb
