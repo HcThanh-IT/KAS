@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Pages\AuthController;
+use App\Http\Controllers\Pages\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    return view('pages/login');
-});
-Route::get('/home', function () {
-    return view('pages/home');
-});
 
+// Đăng nhập
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+// Đăng xuất
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Trang chủ
+Route::get('/home', [HomeController::class, 'showHome'])->name('home');
+// Route::get('/home', function () {
+//     return view('pages/home');
+// })->middleware('auth'); // Chỉ cho phép người dùng đã đăng nhập truy cập

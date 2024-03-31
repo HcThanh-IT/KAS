@@ -15,6 +15,12 @@
 </head>
 
 <body class="h-100">
+@if ($errors->any())
+    <div class="alert alert-danger">
+        {{ $errors->first('message') }}
+    </div>
+@endif
+
     
     <!--*******************
         Preloader start
@@ -43,15 +49,17 @@
                             <div class="card-body pt-5">
                                 <a class="text-center" href="index.html"> <h4>Rosella</h4></a>
         
-                                <form class="mt-5 mb-5 login-input">
+                                <form method="POST" action="{{ route('login') }}" class="mt-5 mb-5 login-input">
+                                    @csrf
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="text" name="username" class="form-control" placeholder="Username">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" name="password" class="form-control" placeholder="Password">
                                     </div>
-                                    <button class="btn login-form__btn submit w-100">Sign In</button>
+                                    <button type="submit" class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
+
                                 <p class="mt-5 login-form__footer">Dont have account? <a href="page-register.html" class="text-primary">Sign Up</a> now</p>
                             </div>
                         </div>
