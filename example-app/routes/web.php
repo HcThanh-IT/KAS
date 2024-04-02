@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages\AuthController;
 use App\Http\Controllers\Pages\HomeController;
+use App\Http\Controllers\Pages\CashController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +33,5 @@ Route::get('/home', [HomeController::class, 'showHome'])->name('home');
 // Route::get('/home', function () {
 //     return view('pages/home');
 // })->middleware('auth'); // Chỉ cho phép người dùng đã đăng nhập truy cập
+
+Route::get('/cash/cashin', [CashController::class, 'showCashIn'])->name('cashin');

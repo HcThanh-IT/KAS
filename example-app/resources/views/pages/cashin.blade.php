@@ -7,14 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <!-- Pignose Calender -->
-    <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
-    <!-- Chartist -->
-    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
-    <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <!-- Custom Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -46,7 +41,7 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                    <b class="logo-abbr"><img src="./images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
                         <img src="images/logo-text.png" alt="">
@@ -75,10 +70,10 @@
                             <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
                         </div>
                         <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
-                        <div class="drop-down animated flipInX d-md-none">
-                            <form action="#">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </form>
+                        <div class="drop-down   d-md-none">
+							<form action="#">
+								<input type="text" class="form-control" placeholder="Search">
+							</form>
                         </div>
                     </div>
                 </div>
@@ -86,14 +81,12 @@
                     <ul class="clearfix">
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-email-outline"></i>
-                                <span class="badge badge-pill gradient-1">3</span>
+                                <span class="badge gradient-1 badge-pill badge-primary">3</span>
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
                                     <span class="">3 New Messages</span>  
-                                    <a href="javascript:void()" class="d-inline-block">
-                                        <span class="badge badge-pill gradient-1">3</span>
-                                    </a>
+                                    
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
@@ -144,14 +137,12 @@
                         </li>
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
-                                <span class="badge badge-pill gradient-2">3</span>
+                                <span class="badge badge-pill gradient-2 badge-primary">3</span>
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
                                     <span class="">2 New Notifications</span>  
-                                    <a href="javascript:void()" class="d-inline-block">
-                                        <span class="badge badge-pill gradient-2">5</span>
-                                    </a>
+                                    
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
@@ -214,16 +205,14 @@
                                 <span class="activity active"></span>
                                 <img src="images/user/1.png" height="40" width="40" alt="">
                             </div>
-                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                            <div class="drop-down dropdown-profile   dropdown-menu">
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
                                             <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void()">
-                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
-                                            </a>
+                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
                                         </li>
                                         
                                         <hr class="my-2">
@@ -408,197 +397,178 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div>
+                    <div class="col-lg-12">
+                        <div class="card">
                             <div class="card-body">
-                                <!-- <h4 class="card-title">Default Tab</h4> -->
-                                <!-- Nav tabs -->
-                                <div class="default-tab">
-                                    <ul class="nav nav-tabs mb-3" role="tablist">
-                                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">CRM</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile">Thu chi</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#contact">Mua hàng</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#message">Kho hàng</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="home" role="tabpanel">
-                                            <div class="p-t-15">
-                                                <h4>This is home title</h4>
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="profile">
-                                            <div class="p-t-15">
-                                                <div class="container-fluid mt-3">
-                                                    <div class="row">
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <h4 class="mt-3">Phiếu thu tiền mặt</h4>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 border-right">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="{{ route('cashin') }}" class="m-0">Thêm mới</a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Danh sách</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <h4 class="mt-3">Phiếu chi tiền mặt</h4>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 border-right">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Thêm mới</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Danh sách</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <a href=""><h4 class="mt-3">Báo cáo sổ quỹ</h4></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <a href=""><h4 class="mt-3">Nhật ký thu</h4></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <a href=""><h4 class="mt-3">Nhật ký chi</h4></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- #/ container -->
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="contact">
-                                            <div class="p-t-15">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="message">
-                                            <div class="p-t-15">
-                                                <div class="container-fluid mt-3">
-                                                    <div class="row">
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <h4 class="mt-3">Phiếu nhập kho</h4>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 border-right">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Thêm mới</a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Danh sách</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <h4 class="mt-3">Phiếu xuất kho</h4>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 border-right">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Thêm mới</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Danh sách</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-6">
-                                                            <div>
-                                                                <div class="social-graph-wrapper p-0">
-                                                                    <h4 class="mt-3">Phiếu nhập kiểm kê</h4>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 border-right">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Thêm mới</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                                                                            
-                                                                            <a href="" class="m-0">Danh sách</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- #/ container -->
-                                            </div>
-                                        </div>
-                                    </div>
+                                <h4 class="card-title">Outline Buttons</h4>
+                                <div class="outline-button">
+                                    <button type="button" class="btn mb-1 btn-outline-primary">Primary</button>
+                                    <button type="button" class="btn mb-1 btn-outline-secondary">Secondary</button>
+                                    <button type="button" class="btn mb-1 btn-outline-success">Success</button>
+                                    <button type="button" class="btn mb-1 btn-outline-danger">Danger</button>
+                                    <button type="button" class="btn mb-1 btn-outline-warning">Warning</button>
+                                    <button type="button" class="btn mb-1 btn-outline-info">Info</button>
+                                    <button type="button" class="btn mb-1 btn-outline-light">Light</button>
+                                    <button type="button" class="btn mb-1 btn-outline-dark">Dark</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Phiếu thu tiền mặt</h4>
+                                <div class="basic-form">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label>Ký hiệu</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label>State</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected="selected">Chọn kho hàng...</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                    <option>Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label>Tiền tệ</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label>Tỷ giá</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label>Ngày</label>
+                                                <input type="datetime-local" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label>Người giao hàng</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label>Tiền hàng</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label>Tỷ giá</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label>Loại chứng từ</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected="selected">Loại chứng từ...</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                    <option>Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label>Chứng từ gốc</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                            </div>
+                                            <div class="form-group col-md-1 d-flex justify-content-center align-items-center">
+                                                <input type="checkbox">
+                                            </div>
+
+                                            <div class="form-group col-md-1">
+                                                <label>Thuế</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected="selected">Thuế...</option>
+                                                    <option>0%</option>
+                                                    <option>5%</option>
+                                                    <option>8%</option>
+                                                    <option>10%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label>Tổng thuế</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                                <label>Tổng thuế</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>City</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>State</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected="selected">Choose...</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                    <option>Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label>Zip</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Hàng hóa</th>
+                                                <th>ĐVT</th>
+                                                <th>Số lượng</th>
+                                                <th>ĐVT</th>
+                                                <th>Số lượng</th>
+                                                <th>Đơn giá</th>
+                                                <th>Đơn giá</th>
+                                                <th>Đơn giá</th>
+                                                <th>Đơn giá</th>
+                                                <th>Đơn giá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                                <td class="p-0"><input type="text" class="form-control"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <!-- #/ container -->
-        </div>
-
-
-
-
-        <div class="content-body">
-
-            
         </div>
         <!--**********************************
             Content body end
@@ -624,33 +594,14 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <script src="plugins/common/common.min.js"></script>
-    <script src="js/custom.min.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/gleek.js"></script>
-    <script src="js/styleSwitcher.js"></script>
+    <script src="{{ asset('plugins/common/common.min.js') }}"></script>
+    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="{{ asset('js/settings.js') }}"></script>
+    <script src="{{ asset('js/gleek.js') }}"></script>
+    <script src="{{ asset('js/styleSwitcher.js') }}"></script>
 
-    <!-- Chartjs -->
-    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
-    <!-- Circle progress -->
-    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- Datamap -->
-    <script src="./plugins/d3v3/index.js"></script>
-    <script src="./plugins/topojson/topojson.min.js"></script>
-    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
-    <!-- Morrisjs -->
-    <script src="./plugins/raphael/raphael.min.js"></script>
-    <script src="./plugins/morris/morris.min.js"></script>
-    <!-- Pignose Calender -->
-    <script src="./plugins/moment/moment.min.js"></script>
-    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-    <!-- ChartistJS -->
-    <script src="./plugins/chartist/js/chartist.min.js"></script>
-    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
-
-
-
-    <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="{{ asset('plugins/validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('plugins/validation/jquery.validate-init.js') }}"></script>
 
 </body>
 
