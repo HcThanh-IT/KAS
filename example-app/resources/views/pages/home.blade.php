@@ -452,7 +452,7 @@
                                                                     <div class="col-6">
                                                                         <div class="pt-3 pb-3 pl-0 pr-0 text-center">
                                                                             
-                                                                            <a href="" class="m-0">Danh sách</a>
+                                                                            <a href="{{ route('cashinlist') }}" class="m-0">Danh sách</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -595,11 +595,6 @@
 
 
 
-
-        <div class="content-body">
-
-            
-        </div>
         <!--**********************************
             Content body end
         ***********************************-->

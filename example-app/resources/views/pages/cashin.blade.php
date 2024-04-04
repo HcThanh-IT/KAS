@@ -40,16 +40,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Outline Buttons</h4>
+                            <h3>Phiếu nhập mua hàng</h3>
                             <div class="outline-button">
-                                <button type="button" class="btn mb-1 btn-outline-primary">Primary</button>
-                                <button type="button" class="btn mb-1 btn-outline-secondary">Secondary</button>
-                                <button type="button" class="btn mb-1 btn-outline-success">Success</button>
-                                <button type="button" class="btn mb-1 btn-outline-danger">Danger</button>
-                                <button type="button" class="btn mb-1 btn-outline-warning">Warning</button>
-                                <button type="button" class="btn mb-1 btn-outline-info">Info</button>
-                                <button type="button" class="btn mb-1 btn-outline-light">Light</button>
-                                <button type="button" class="btn mb-1 btn-outline-dark">Dark</button>
+                                <button type="button" class="btn mb-1 mr-3 btn-outline-primary">Thêm mới</button>
+                                <button type="button" class="btn mb-1 mr-3 btn-outline-success">Lưu</button>
+                                <button type="button" class="btn mb-1 mr-3 btn-outline-secondary">In</button>
+                                <button type="button" class="btn mb-1 mr-3 btn-outline-light"><a href="">Danh sách</a></button>
                             </div>
                         </div>
                     </div>
@@ -58,7 +54,6 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Phiếu thu tiền mặt</h4>
                             <div class="basic-form">
                                 <form>
                                     <div class="form-row">
@@ -146,21 +141,49 @@
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label>City</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label>State</label>
+                                        <div class="form-group col-md-3">
+                                            <label>Trạng thái</label>
                                             <select id="inputState" class="form-control">
-                                                <option selected="selected">Choose...</option>
+                                                <option selected="selected">Trạng thái...</option>
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
                                                 <option>Option 3</option>
                                             </select>
                                         </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Sổ quỹ</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected="selected">Sổ quỹ...</option>
+                                                <option>Tiền mặt</option>
+                                                <option>Công nợ</option>
+                                                <option>Option 3</option>
+                                            </select>
+                                        </div>
                                         <div class="form-group col-md-2">
-                                            <label>Zip</label>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label>Tổng tiền</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label>Tổng tiền</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Nhà cung cấp</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected="selected">Chọn nhà cung cấp...</option>
+                                                @foreach($suppliers as $supplier)
+                                                    <option value="{{ $supplier->MaNCC }}">{{ $supplier->MaNCC }}-{{ $supplier->TenNCC }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Ghi chú</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>

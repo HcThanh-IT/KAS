@@ -35,3 +35,4 @@ Route::get('/home', [HomeController::class, 'showHome'])->name('home');
 // })->middleware('auth'); // Chỉ cho phép người dùng đã đăng nhập truy cập
 
 Route::get('/cash/cashin', [CashController::class, 'showCashIn'])->name('cashin');
+Route::get('/cash/cashinlist', [CashController::class, 'showCashInList'])->name('cashinlist');
